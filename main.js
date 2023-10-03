@@ -98,17 +98,15 @@ class Timer {
     }
 }
 
-const timer = new Timer(2);
+const timer = new Timer(30);
 timerOutput.textContent = timer.formatTimeString();
 
 startStopBtn.addEventListener("click", () => {
     if (timer.isStopped) {
-        //timer was stopped or not started.
-        //button was "start" when clicked, start timer
+        //timer was stopped or not started, start timer
         timer.start();      
     } else {
-        //timer was running
-        //button was "stop" when clicked, stop timer      
+        //timer was running, stop timer      
         timer.stop();        
     }    
 });
