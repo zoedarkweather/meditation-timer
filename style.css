@@ -145,6 +145,6 @@ footer {
 
 @media (max-height:800px) {
     .container {
-        margin-top: auto;        
+        margin-top: 3em;        
     }
 }
