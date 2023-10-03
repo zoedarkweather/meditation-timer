@@ -65,13 +65,11 @@ h1 {
 /* timer  */
 .container {    
     margin-top: 3em;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
 }
 
 .timer {
     font-size: 6rem;
+    text-align: center;
 }
 
 /* buttons */
@@ -80,7 +78,7 @@ button {
     display: block;
     width: 5em;
     height: 5em;
-    margin-top: 2em;
+    margin: 2em auto;
     border: none;
     border-radius: 100%;    
 }
