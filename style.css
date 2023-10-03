@@ -47,7 +47,7 @@ a:active {
 /* heading  */
 h1 {
     font-weight: var(--font-wt-bold); 
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     line-height: 5rem;
     text-align: center;
     color: var(--neutral-light);    
