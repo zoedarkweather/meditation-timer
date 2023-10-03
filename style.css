@@ -23,10 +23,6 @@
 }
 
 /* general  */
-html, body {
-    height: 100vh;
-}
-
 body {
     font-family: var(--primary-font);
     font-weight: var(--font-wt-reg);
@@ -68,7 +64,6 @@ h1 {
 
 /* timer  */
 .container {
-    margin-top: 8em;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -140,11 +135,5 @@ footer {
 @media (min-width:600px) {
     h1 {
         font-size: 4rem;        
-    }
-}
-
-@media (max-height:800px) {
-    .container {
-        margin-top: 3em;        
     }
 }
