@@ -43,7 +43,7 @@ a:active {
 /* heading  */
 h1 {
     font-weight: var(--font-wt-bold); 
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     line-height: 5rem;
     text-align: center;
     color: var(--neutral-light);    
@@ -115,7 +115,6 @@ footer {
     left: 0;
 }
 
-
 @media (min-width:448px) {
     .hero-img {
         min-height: 400px;
@@ -126,10 +125,6 @@ footer {
     .transparent-bg {
         padding: 2.5em;
     }
-
-    /* .container {
-        margin-top: 7em;
-    } */
 }
 
 @media (min-width:600px) {
