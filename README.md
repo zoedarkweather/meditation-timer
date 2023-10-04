@@ -63,4 +63,3 @@ I plan on adding a way for the user to change the meditation time, change or rem
 ## Author
 
 - Github - [Jennifer Souza](https://github.com/zoedarkweather)
-- Frontend Mentor - [@zoedarkweather](https://www.frontendmentor.io/profile/zoedarkweather)
