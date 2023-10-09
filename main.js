@@ -99,7 +99,7 @@ class Timer {
     }
 }
 
-const timer = new Timer(2);
+const timer = new Timer(30);
 timerOutput.textContent = timer.formatTimeString();
 
 startStopBtn.addEventListener("click", () => {
