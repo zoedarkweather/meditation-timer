@@ -19,8 +19,8 @@ class Timer {
         this.isStopped = true;  
         this.interval = 1000;  
         this.bell = new Audio("./assets/media/bell-2.mp3"); 
-        this.secondBell = this.time - 18;
-        this.thirdBell = this.time - 35;              
+        this.secondBell = this.time - 14;
+        this.thirdBell = this.time - 28;              
     }
 
     start() {        
@@ -54,7 +54,8 @@ class Timer {
         this.time = this.numberOfSeconds;                     
     }
 
-    ringBell() {          
+    ringBell() {    
+        this.bell.currentTime = 0;   
         this.bell.play();
     }
 
@@ -93,12 +94,12 @@ class Timer {
             //ring bells to end meditation
             this.stop();
             this.ringBell();   
-            setTimeout(this.ringBell.bind(this), 18000);
+            setTimeout(this.ringBell.bind(this), 8000);
         }
     }
 }
 
-const timer = new Timer(30);
+const timer = new Timer(2);
 timerOutput.textContent = timer.formatTimeString();
 
 startStopBtn.addEventListener("click", () => {

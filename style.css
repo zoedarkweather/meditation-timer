@@ -104,15 +104,6 @@ button:active {
     background-color: var(--gold);
 }
 
-/* footer  */
-footer {
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
 @media (min-width:448px) {
     .hero-img {
         min-height: 400px;
