@@ -18,7 +18,7 @@ A simple meditation timer
 
 ### Project Description
 
-This is a simple meditation timer. Right now it only allows the user to meditate for 30 minutes. There is a start button, which when clicked turns into the stop button, and starts the timer running. The timer updates itself on the screen so you can see how much time is remaining. The timer also plays bells at the start and end of meditation. The current tone and configuration of the bells is Zen style - I may allow some flexibility for the bells in future updates.
+This is a simple meditation timer. Right now it only allows the user to meditate for 30 minutes. There is a start button, which when clicked turns into the stop button, and starts the timer running. The timer updates itself on the screen so you can see how much time is remaining. The timer also plays bells at the start and end of meditation.
 
 ### Screenshot
 
