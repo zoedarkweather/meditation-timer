@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +6,7 @@
 
 :root {
     /* typography */
-    --primary-font: "Tajawal";
+    --primary-font: "Tajawal", sans-serif;
     --font-wt-reg: 400;
     --font-wt-bold: 500;
     /* colors  */
@@ -31,27 +29,16 @@ body {
     color: var(--neutral-dark);
 }
 
-a {
-    color: var(--black);
-}
-
-a:hover,
-a:focus,
-a:active { 
-    color: var(--gold);
-}
-
 /* heading  */
 h1 {
     font-weight: var(--font-wt-bold); 
     font-size: 2.5rem;
-    line-height: 5rem;
     text-align: center;
     color: var(--neutral-light);    
 }
 
 .heading-img-bg {
-    min-height: 271px;
+    min-height: 16.9em;
     display: flex;
     align-items: end;
     background: no-repeat top left url("./assets/images/buddha-statue-gold-mobile-cropped.jpg");
@@ -107,7 +94,7 @@ button:active {
 
 @media (min-width:448px) {
     .heading-img-bg {
-        min-height: 400px;
+        min-height: 25em;
         background-image: url("./assets/images/buddha-statue-gold-cropped.jpg");
         background-size: cover;
     }
