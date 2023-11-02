@@ -51,7 +51,7 @@ h1 {
 }
 
 /* timer  */
-.container {    
+.wrapper {    
     margin-top: 3em;
 }
 
@@ -61,12 +61,23 @@ h1 {
 }
 
 /* buttons */
+.flex-container {
+    width: 30%;
+    max-width: 15em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
 button {
     cursor: pointer;
     display: block;
     width: 5em;
     height: 5em;
     margin: 2em auto;
+    flex-shrink: 0;
     border: none;
     border-radius: 100%;    
 }
@@ -74,13 +85,25 @@ button {
 .stopped {    
     background:no-repeat center url("./assets/icons/play-circle.svg");
     background-color: var(--neutral-dark);
-    color: var(--neutral-light);
 }
 
 .running {    
     background:no-repeat center url("./assets/icons/stop-circle.svg");
     background-color: var(--neutral-dark);
-    color: var(--neutral-light);
+}
+
+.add-time-btn {
+    width: 4em;
+    height: 4em;
+    background:no-repeat center url("./assets/icons/plus.svg");
+    background-color: var(--neutral-dark);
+}
+
+.subtract-time-btn {
+    width: 4em;
+    height: 4em;
+    background:no-repeat center url("./assets/icons/subtract.svg");
+    background-color: var(--neutral-dark);
 }
 
 button:hover,

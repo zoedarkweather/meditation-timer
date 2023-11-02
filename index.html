@@ -15,9 +15,13 @@
                 <h1>Meditation Timer</h1>
             </div>
         </div>   
-        <div class="container">             
+        <div class="wrapper">            
             <div role="timer" class="timer" id="timer">30:00</div>
-            <button type="button" class="start-stop-btn stopped" id="start-stop-btn" aria-label="Start timer"></button>
+            <div class="flex-container">
+                <button type="button" class="subtract-time-btn" id="subtract-time-btn" aria-label="Subtract minutes from meditation time"></button> 
+                <button type="button" class="start-stop-btn stopped" id="start-stop-btn" aria-label="Start timer"></button>
+                <button type="button" class="add-time-btn" id="add-time-btn" aria-label="Add minutes to meditation time"></button>
+            </div>
         </div>
     </main>
 </body>

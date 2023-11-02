@@ -1,9 +1,10 @@
 const timerOutput = document.querySelector("#timer");
 const startStopBtn = document.querySelector("#start-stop-btn");
+const subtractTimeBtn = document.querySelector("#subtract-time-btn");
+const addTimeBtn = document.querySelector("#add-time-btn");
 
 class Timer {
     isStopped;
-    numberOfMinutes;
     bell;
     secondBell;
     thirdBell;
@@ -19,31 +20,16 @@ class Timer {
         this.isStopped = true;  
         this.interval = 1000;  
         this.bell = new Audio("./assets/media/bell-2.mp3"); 
-        this.secondBell = this.time - 14;
-        this.thirdBell = this.time - 28;              
+        this.setStartingBellTimes();    
+        timerOutput.textContent = this.formatTimeString();          
     }
 
-    start() {        
-        startStopBtn.classList.remove("stopped");
-        startStopBtn.classList.add("running");        
-        startStopBtn.setAttribute("aria-label", "stop timer");
-        this.isStopped = false;
-        this.ringBell();
-        this.startTime = Date.now();
-        this.timerID = setTimeout(this.run.bind(this), this.interval);
-    }
+    addMinute() {
+        this.numberOfSeconds += 60;
+        this.reset();
+        this.setStartingBellTimes();
+    }    
 
-    stop() {       
-        clearTimeout(this.timerID);
-        startStopBtn.classList.remove("running");
-        startStopBtn.classList.add("stopped");
-        startStopBtn.setAttribute("aria-label", "start timer");
-        this.isStopped = true;
-        this.reset();   
-        timerOutput.textContent = this.formatTimeString();
-        
-    }
-    
     formatTimeString() {
         let minutes = (Math.floor(this.time/60)).toString().padStart(2,"0");
         let seconds = (Math.floor(this.time - minutes * 60)).toString().padStart(2,"0");
@@ -51,7 +37,8 @@ class Timer {
     }
 
     reset() {  
-        this.time = this.numberOfSeconds;                     
+        this.time = this.numberOfSeconds;  
+        timerOutput.textContent = this.formatTimeString();                   
     }
 
     ringBell() {    
@@ -97,10 +84,39 @@ class Timer {
             setTimeout(this.ringBell.bind(this), 8000);
         }
     }
+
+    setStartingBellTimes() {
+        this.secondBell = this.time - 14;
+        this.thirdBell = this.time - 28; 
+    }
+
+    start() {        
+        startStopBtn.classList.remove("stopped");
+        startStopBtn.classList.add("running");        
+        startStopBtn.setAttribute("aria-label", "stop timer");
+        this.isStopped = false;
+        this.ringBell();
+        this.startTime = Date.now();
+        this.timerID = setTimeout(this.run.bind(this), this.interval);
+    }
+
+    stop() {       
+        clearTimeout(this.timerID);
+        startStopBtn.classList.remove("running");
+        startStopBtn.classList.add("stopped");
+        startStopBtn.setAttribute("aria-label", "start timer");
+        this.isStopped = true;
+        this.reset();         
+    }   
+
+    subtractMinute () {
+        this.numberOfSeconds -= 60;
+        this.reset();
+        this.setStartingBellTimes();
+    }
 }
 
 const timer = new Timer(30);
-timerOutput.textContent = timer.formatTimeString();
 
 startStopBtn.addEventListener("click", () => {
     if (timer.isStopped) {
@@ -110,4 +126,20 @@ startStopBtn.addEventListener("click", () => {
         //timer was running, stop timer      
         timer.stop();        
     }    
+});
+
+addTimeBtn.addEventListener("click", () => {
+    if (!timer.isStopped) {
+        //if timer is running, stop it before adding time
+        timer.stop();        
+    } 
+    timer.addMinute();
+});
+
+subtractTimeBtn.addEventListener("click", () => {
+    if (!timer.isStopped) {
+        //if timer is running, stop it before subtracting time
+        timer.stop();        
+    } 
+    timer.subtractMinute();
 });
