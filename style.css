@@ -19,7 +19,8 @@
     --gradient-bg: linear-gradient(
                     to left, 
                     var(--neutral-white), 
-                    var(--neutral-light));
+                    var(--neutral-light)
+                    );
 }
 
 /* general  */
@@ -49,7 +50,7 @@ h1 {
     color: var(--neutral-light);    
 }
 
-.hero-img {
+.heading-img-bg {
     min-height: 271px;
     display: flex;
     align-items: end;
@@ -105,7 +106,7 @@ button:active {
 }
 
 @media (min-width:448px) {
-    .hero-img {
+    .heading-img-bg {
         min-height: 400px;
         background-image: url("./assets/images/buddha-statue-gold-cropped.jpg");
         background-size: cover;
