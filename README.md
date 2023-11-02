@@ -1,4 +1,5 @@
 # Meditation Timer
+
 A simple meditation timer
 
 ## Table of contents
