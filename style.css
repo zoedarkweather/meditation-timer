@@ -84,26 +84,28 @@ button {
 
 .stopped {    
     background:no-repeat center url("./assets/icons/play-circle.svg");
-    background-color: var(--neutral-dark);
 }
 
 .running {    
-    background:no-repeat center url("./assets/icons/stop-circle.svg");
+    background:no-repeat center url("./assets/icons/stop-circle.svg"); 
+}
+
+.stopped, .running {
     background-color: var(--neutral-dark);
 }
 
 .add-time-btn {
-    width: 4em;
-    height: 4em;
     background:no-repeat center url("./assets/icons/plus.svg");
-    background-color: var(--neutral-dark);
 }
 
 .subtract-time-btn {
+    background:no-repeat center url("./assets/icons/subtract.svg");
+}
+
+.add-time-btn, .subtract-time-btn {
     width: 4em;
     height: 4em;
-    background:no-repeat center url("./assets/icons/subtract.svg");
-    background-color: var(--neutral-dark);
+    background-color: var(--neutral-light);
 }
 
 button:hover,
